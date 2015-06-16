@@ -1,22 +1,26 @@
 
 package Model;
 
-import java.util.Date;
+
 
 
 public class Venda {
     
-    int ID_Venda, ID_Item;
-    Date Data_Venda;
+    int ID_Venda, ID_Item,ID_Cliente,ID_Funcionario;
+    String Data_Venda;
 
-    public Venda(int ID_Venda, int ID_Item, Date Data_Venda) {
+    public Venda(int ID_Venda, int ID_Item, int ID_Cliente, int ID_Funcionario, String Data_Venda) {
         this.ID_Venda = ID_Venda;
         this.ID_Item = ID_Item;
+        this.ID_Cliente = ID_Cliente;
+        this.ID_Funcionario = ID_Funcionario;
         this.Data_Venda = Data_Venda;
     }
 
-    public Venda(int ID_Item, Date Data_Venda) {
+    public Venda(int ID_Item, int ID_Cliente, int ID_Funcionario, String Data_Venda) {
         this.ID_Item = ID_Item;
+        this.ID_Cliente = ID_Cliente;
+        this.ID_Funcionario = ID_Funcionario;
         this.Data_Venda = Data_Venda;
     }
 
@@ -36,15 +40,31 @@ public class Venda {
         this.ID_Item = ID_Item;
     }
 
-    public Date getData_Venda() {
+    public int getID_Cliente() {
+        return ID_Cliente;
+    }
+
+    public void setID_Cliente(int ID_Cliente) {
+        this.ID_Cliente = ID_Cliente;
+    }
+
+    public int getID_Funcionario() {
+        return ID_Funcionario;
+    }
+
+    public void setID_Funcionario(int ID_Funcionario) {
+        this.ID_Funcionario = ID_Funcionario;
+    }
+
+    public String getData_Venda() {
         return Data_Venda;
     }
 
-    public void setData_Venda(Date Data_Venda) {
+    public void setData_Venda(String Data_Venda) {
         this.Data_Venda = Data_Venda;
     }
-            
-    
+
+   
     
     
     
