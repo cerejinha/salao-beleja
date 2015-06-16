@@ -5,38 +5,35 @@ package Model;
  
 public class Funcionario {
     
-    int id_funcionario,RG_Funcionario, CPF_Funcionario,Login_Funcionario, Senha_Funcionario, Tipo_Acesso;
+    int id_funcionario,RG_Funcionario, CPF_Funcionario, Senha_Funcionario,Telefone;
             
-    String Nome_Funcionario, Endereco_Funcionario, Telefone_Funcionario, Email_Funcionario,CTPS;
+    String Nome_Funcionario, Endereco_Funcionario, Email_Funcionario,CTPS,Login_Funcionario,Tipo_Acesso;
 
-  
-    // consultar
-    public Funcionario(int id_funcionario, int RG_Funcionario, int CPF_Funcionario, int Login_Funcionario, int Senha_Funcionario, int Tipo_Acesso, String Nome_Funcionario, String Endereco_Funcionario, String Telefone_Funcionario, String Email_Funcionario, String CTPS) {
+    public Funcionario(int id_funcionario, int RG_Funcionario, int CPF_Funcionario, int Senha_Funcionario, int Telefone, String Nome_Funcionario, String Endereco_Funcionario, String Email_Funcionario, String CTPS, String Login_Funcionario, String Tipo_Acesso) {
         this.id_funcionario = id_funcionario;
         this.RG_Funcionario = RG_Funcionario;
         this.CPF_Funcionario = CPF_Funcionario;
-        this.Login_Funcionario = Login_Funcionario;
         this.Senha_Funcionario = Senha_Funcionario;
-        this.Tipo_Acesso = Tipo_Acesso;
+        this.Telefone = Telefone;
         this.Nome_Funcionario = Nome_Funcionario;
         this.Endereco_Funcionario = Endereco_Funcionario;
-        this.Telefone_Funcionario = Telefone_Funcionario;
         this.Email_Funcionario = Email_Funcionario;
         this.CTPS = CTPS;
+        this.Login_Funcionario = Login_Funcionario;
+        this.Tipo_Acesso = Tipo_Acesso;
     }
 
-    // Cadastrar
-    public Funcionario(int RG_Funcionario, int CPF_Funcionario, int Login_Funcionario, int Senha_Funcionario, int Tipo_Acesso, String Nome_Funcionario, String Endereco_Funcionario, String Telefone_Funcionario, String Email_Funcionario, String CTPS) {
+    public Funcionario(int RG_Funcionario, int CPF_Funcionario, int Senha_Funcionario, int Telefone, String Nome_Funcionario, String Endereco_Funcionario, String Email_Funcionario, String CTPS, String Login_Funcionario, String Tipo_Acesso) {
         this.RG_Funcionario = RG_Funcionario;
         this.CPF_Funcionario = CPF_Funcionario;
-        this.Login_Funcionario = Login_Funcionario;
         this.Senha_Funcionario = Senha_Funcionario;
-        this.Tipo_Acesso = Tipo_Acesso;
+        this.Telefone = Telefone;
         this.Nome_Funcionario = Nome_Funcionario;
         this.Endereco_Funcionario = Endereco_Funcionario;
-        this.Telefone_Funcionario = Telefone_Funcionario;
         this.Email_Funcionario = Email_Funcionario;
         this.CTPS = CTPS;
+        this.Login_Funcionario = Login_Funcionario;
+        this.Tipo_Acesso = Tipo_Acesso;
     }
 
     public int getId_funcionario() {
@@ -63,14 +60,6 @@ public class Funcionario {
         this.CPF_Funcionario = CPF_Funcionario;
     }
 
-    public int getLogin_Funcionario() {
-        return Login_Funcionario;
-    }
-
-    public void setLogin_Funcionario(int Login_Funcionario) {
-        this.Login_Funcionario = Login_Funcionario;
-    }
-
     public int getSenha_Funcionario() {
         return Senha_Funcionario;
     }
@@ -79,12 +68,12 @@ public class Funcionario {
         this.Senha_Funcionario = Senha_Funcionario;
     }
 
-    public int getTipo_Acesso() {
-        return Tipo_Acesso;
+    public int getTelefone() {
+        return Telefone;
     }
 
-    public void setTipo_Acesso(int Tipo_Acesso) {
-        this.Tipo_Acesso = Tipo_Acesso;
+    public void setTelefone(int Telefone) {
+        this.Telefone = Telefone;
     }
 
     public String getNome_Funcionario() {
@@ -103,14 +92,6 @@ public class Funcionario {
         this.Endereco_Funcionario = Endereco_Funcionario;
     }
 
-    public String getTelefone_Funcionario() {
-        return Telefone_Funcionario;
-    }
-
-    public void setTelefone_Funcionario(String Telefone_Funcionario) {
-        this.Telefone_Funcionario = Telefone_Funcionario;
-    }
-
     public String getEmail_Funcionario() {
         return Email_Funcionario;
     }
@@ -126,6 +107,24 @@ public class Funcionario {
     public void setCTPS(String CTPS) {
         this.CTPS = CTPS;
     }
+
+    public String getLogin_Funcionario() {
+        return Login_Funcionario;
+    }
+
+    public void setLogin_Funcionario(String Login_Funcionario) {
+        this.Login_Funcionario = Login_Funcionario;
+    }
+
+    public String getTipo_Acesso() {
+        return Tipo_Acesso;
+    }
+
+    public void setTipo_Acesso(String Tipo_Acesso) {
+        this.Tipo_Acesso = Tipo_Acesso;
+    }
+
+    
     
     
 }

@@ -6,6 +6,7 @@ public class Detalhe_Venda {
     
     int Id_Detalhe, Quantidade, ID_Venda, ID_Cliente,ID_Produto;
     float Preco_Unitario, Preco_Total;
+            
     String Forma_Pagamento;
 
     

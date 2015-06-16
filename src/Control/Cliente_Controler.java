@@ -27,9 +27,9 @@ public class Cliente_Controler {
              statement.setInt(2,cliente.getTelefone_Cliente());
              statement.setInt(3,cliente.getRG_Cliente());
              statement.setInt(4,cliente.getCPF_cliente());
-              statement.setString(5,cliente.getNome_Cliente());
-              statement.setString(6,cliente.getEndereco_Cliente());
-              statement.setString(7,cliente.getEmail_Cliente());
+             statement.setString(5,cliente.getNome_Cliente());
+             statement.setString(6,cliente.getEndereco_Cliente());
+             statement.setString(7,cliente.getEmail_Cliente());
             
               
              int rowsInserted = statement.executeUpdate(); 
@@ -62,7 +62,7 @@ public class Cliente_Controler {
                 String Email_Cliente= result.getString("Email_Cliente");
                         
                 
-                String output = "Medicamento #%d: %d -%d -%d -%d %s %s %s ";
+                String output = "Cliente #%d: %d -%d -%d -%d -%s -%s -%s ";
                 System.out.println(String.format(output, ++count, id_cliente,Telefone_Cliente,RG_Cliente,CPF_cliente,Nome_Cliente,Endereco_Cliente,Email_Cliente));
                                 
               
