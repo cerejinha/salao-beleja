@@ -10,25 +10,25 @@ public class Registro_Produto {
     
     int id_registro,quantidade,Id_fornecedor;
     String data_compra,data_venda;
+     float Valor_Venda,Valor_compra;
 
-    
-    // consultar
-
-    public Registro_Produto(int id_registro, int quantidade, int Id_fornecedor, String data_compra, String data_venda) {
+    public Registro_Produto(int id_registro, int quantidade, int Id_fornecedor, String data_compra, String data_venda, float Valor_Venda, float Valor_compra) {
         this.id_registro = id_registro;
         this.quantidade = quantidade;
         this.Id_fornecedor = Id_fornecedor;
         this.data_compra = data_compra;
         this.data_venda = data_venda;
+        this.Valor_Venda = Valor_Venda;
+        this.Valor_compra = Valor_compra;
     }
-    
-    //cadastrar
 
-    public Registro_Produto(int quantidade, int Id_fornecedor, String data_compra, String data_venda) {
+    public Registro_Produto(int quantidade, int Id_fornecedor, String data_compra, String data_venda, float Valor_Venda, float Valor_compra) {
         this.quantidade = quantidade;
         this.Id_fornecedor = Id_fornecedor;
         this.data_compra = data_compra;
         this.data_venda = data_venda;
+        this.Valor_Venda = Valor_Venda;
+        this.Valor_compra = Valor_compra;
     }
 
     public int getId_registro() {
@@ -70,7 +70,22 @@ public class Registro_Produto {
     public void setData_venda(String data_venda) {
         this.data_venda = data_venda;
     }
-    
+
+    public float getValor_Venda() {
+        return Valor_Venda;
+    }
+
+    public void setValor_Venda(float Valor_Venda) {
+        this.Valor_Venda = Valor_Venda;
+    }
+
+    public float getValor_compra() {
+        return Valor_compra;
+    }
+
+    public void setValor_compra(float Valor_compra) {
+        this.Valor_compra = Valor_compra;
+    }
     
     
 }

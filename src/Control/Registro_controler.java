@@ -19,13 +19,15 @@ public class Registro_controler {
              
              Conexao conecta = new Conexao();        
              Connection conexao = conecta.conecta();
-             String sql = "INSERT INTO Registro (id_registro,quantidade,Id_fornecedor,data_compra,data_venda) VALUES (?,?,?)";
+             String sql = "INSERT INTO Registro (id_registro,quantidade,Id_fornecedor,data_compra,data_venda,Valor_Venda,Valor_compra) VALUES (?,?,?,?,?,?,?)";
              PreparedStatement statement = conexao.prepareStatement(sql);
              statement.setInt(1, reg.getId_registro());
              statement.setInt(2, reg.getQuantidade());
              statement.setInt(3, reg.getId_fornecedor());
              statement.setString(4,reg.getData_compra());
-             statement.setString(4,reg.getData_venda());
+             statement.setString(5,reg.getData_venda());
+             statement.setFloat(6, reg.getValor_Venda());
+             statement.setFloat(7, reg.getValor_compra());
              
              
             
@@ -60,10 +62,11 @@ public class Registro_controler {
                 String data_compra = result.getString("data_copra");
                 String data_venda = result.getString("data_venda");
                 
-                        
+                 float Valor_Venda= result.getFloat("venda");
+                float Valor_compra= result.getFloat("compra"); 
                 
-                String output = "Registro #%d: %d -%d -%d  -%s -%s ";
-                System.out.println(String.format(output, ++count,id_registro,quantidade,Id_fornecedor,data_compra,data_venda));
+                String output = "Registro #%d: %d -%d -%d  -%s -%s -%f -%f ";
+                System.out.println(String.format(output, ++count,id_registro,quantidade,Id_fornecedor,data_compra,data_venda,Valor_Venda,Valor_compra));
                                 
               
             
