@@ -69,7 +69,7 @@ public class Agenda_Controler {
                         
                 float valor_servico= result.getFloat("valor_servico");
                 
-                String output = "Servico #%d: %d -%d -%d  -%s -%s -%s -%f ";
+                String output = "Agenda #%d: %d -%d -%d  -%s -%s -%s -%f ";
                 System.out.println(String.format(output, ++count,id_agenda,id_cliente,id_funcionario,nome_servico,data_marcada,hora_marcada,valor_servico ));
                                 
               
